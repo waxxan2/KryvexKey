@@ -1,0 +1,624 @@
+--[[ This File Has Been  Leaked  By Veloix | https://discord.gg/t8dRHPy3M5]]
+
+local CoreGui = game:GetService("CoreGui")
+local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local MarketplaceService = game:GetService("MarketplaceService")
+local StarterGui = game:GetService("StarterGui")
+local HttpService = game:GetService("HttpService")
+
+local LocalPlayer = Players.LocalPlayer
+local UserId = LocalPlayer.UserId
+
+local existingKey = CoreGui:FindFirstChild("Key")
+if existingKey then
+    existingKey:Destroy()
+end
+
+local existingLibrary = CoreGui:FindFirstChild("Library")
+if existingLibrary then
+    existingLibrary:Destroy()
+end
+
+_G.Key = tostring(math.random(1000000, 9999999)) .. "aZ3xN8LpQv7TgR1bDw9K"
+_G.PremiumKey = "M7kLpZ9wQeX4bTn2AyVF"
+
+loadstring(game:HttpGet("https://ervcommunity.com/library.lua"))()
+
+createNotification("Thanks for choosing Desynced. We appreciate your support!")
+
+local PlaceId = game.PlaceId
+local supportedGames = {
+    ["legendsofspeed"] = true,
+    ["musclelegends"] = true,
+    ["zombieattack"] = true,
+    ["ninjalegends"] = true,
+    ["digtoearthscore"] = true,
+    ["beastgymbattle"] = true
+}
+
+local function ValidateKey(key)
+    return true
+end
+
+local function GetKey()
+    return _G.Key
+end
+
+local KeySystem = Instance.new("ScreenGui")
+KeySystem.Name = "Key"
+KeySystem.Parent = CoreGui
+KeySystem.Enabled = true
+
+local Main = Instance.new("Frame")
+Main.Name = "Main"
+Main.Parent = KeySystem
+Main.AnchorPoint = Vector2.new(0.5, 0.5)
+Main.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Main.BackgroundTransparency = 0.100
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.5, 0, 0.5, 0)
+Main.Size = UDim2.new(0, 450, 0, 350)
+Main.ClipsDescendants = true
+Main.Active = true
+Main.Visible = true
+
+local Background = Instance.new("Frame")
+Background.Name = "Background"
+Background.Parent = Main
+Background.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Background.BackgroundTransparency = 0.100
+Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Background.BorderSizePixel = 0
+Background.Size = UDim2.new(1, 0, 1, 0)
+Background.ClipsDescendants = true
+
+local BackgroundImage = Instance.new("ImageLabel")
+BackgroundImage.Parent = Background
+BackgroundImage.Image = "rbxassetid://126110720770200"
+BackgroundImage.ImageTransparency = 0.900
+BackgroundImage.BackgroundTransparency = 1
+BackgroundImage.Size = UDim2.new(1, 0, 1, 0)
+
+local BackgroundCorner = Instance.new("UICorner")
+BackgroundCorner.CornerRadius = UDim.new(0, 8)
+BackgroundCorner.Parent = Background
+
+local MainCorner = Instance.new("UICorner")
+MainCorner.CornerRadius = UDim.new(0, 8)
+MainCorner.Parent = Main
+
+local Topbar = Instance.new("Frame")
+Topbar.Name = "Topbar"
+Topbar.Parent = Main
+Topbar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Topbar.BackgroundTransparency = 0.100
+Topbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Topbar.BorderSizePixel = 0
+Topbar.Size = UDim2.new(1, 0, 0, 40)
+Topbar.ZIndex = 2
+
+local Title = Instance.new("TextLabel")
+Title.Name = "Title"
+Title.Parent = Topbar
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(1, 0, 1, 0)
+Title.Font = Enum.Font.Jura
+Title.RichText = true
+Title.Text = "<b>Desynced  |</b>  Key System"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 16.000
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+local TitlePadding = Instance.new("UIPadding")
+TitlePadding.PaddingLeft = UDim.new(0, 10)
+TitlePadding.Parent = Title
+
+local EnterKeyHolder = Instance.new("Frame")
+EnterKeyHolder.Name = "EnterKeyHolder"
+EnterKeyHolder.Parent = Main
+EnterKeyHolder.AnchorPoint = Vector2.new(0.5, 0.5)
+EnterKeyHolder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+EnterKeyHolder.BackgroundTransparency = 0.100
+EnterKeyHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnterKeyHolder.BorderSizePixel = 0
+EnterKeyHolder.Position = UDim2.new(0.5, 0, 0.3, 0)
+EnterKeyHolder.Size = UDim2.new(0.9, 0, 0, 40)
+
+local EnterKeyHolderCorner = Instance.new("UICorner")
+EnterKeyHolderCorner.CornerRadius = UDim.new(0, 8)
+EnterKeyHolderCorner.Parent = EnterKeyHolder
+
+local EnterKey = Instance.new("TextBox")
+EnterKey.Name = "EnterKey"
+EnterKey.Parent = EnterKeyHolder
+EnterKey.Active = true
+EnterKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnterKey.BackgroundTransparency = 1.000
+EnterKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnterKey.BorderSizePixel = 0
+EnterKey.Size = UDim2.new(1, 0, 1, 0)
+EnterKey.ClipsDescendants = true
+EnterKey.Font = Enum.Font.Jura
+EnterKey.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+EnterKey.PlaceholderText = "Enter Key"
+EnterKey.Text = ""
+EnterKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnterKey.TextSize = 14.000
+EnterKey.TextTruncate = Enum.TextTruncate.AtEnd
+
+local EnterKeyPadding = Instance.new("UIPadding")
+EnterKeyPadding.PaddingLeft = UDim.new(0, 10)
+EnterKeyPadding.PaddingRight = UDim.new(0, 10)
+EnterKeyPadding.Parent = EnterKey
+
+local CheckKeyHolder = Instance.new("Frame")
+CheckKeyHolder.Name = "CheckKeyHolder"
+CheckKeyHolder.Parent = Main
+CheckKeyHolder.AnchorPoint = Vector2.new(0.5, 0.5)
+CheckKeyHolder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+CheckKeyHolder.BackgroundTransparency = 0.100
+CheckKeyHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CheckKeyHolder.BorderSizePixel = 0
+CheckKeyHolder.Position = UDim2.new(0.5, 0, 0.45, 0)
+CheckKeyHolder.Size = UDim2.new(0.9, 0, 0, 40)
+
+local CheckKeyHolderCorner = Instance.new("UICorner")
+CheckKeyHolderCorner.CornerRadius = UDim.new(0, 8)
+CheckKeyHolderCorner.Parent = CheckKeyHolder
+
+local CheckKey = Instance.new("TextButton")
+CheckKey.Name = "CheckKey"
+CheckKey.Parent = CheckKeyHolder
+CheckKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CheckKey.BackgroundTransparency = 1.000
+CheckKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CheckKey.BorderSizePixel = 0
+CheckKey.Size = UDim2.new(1, 0, 1, 0)
+CheckKey.Text = "Check Key"
+CheckKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+CheckKey.TextSize = 14.000
+
+local CheckKeyIcon = Instance.new("ImageLabel")
+CheckKeyIcon.Name = "CheckKeyIcon"
+CheckKeyIcon.Parent = CheckKey
+CheckKeyIcon.AnchorPoint = Vector2.new(0, 0.5)
+CheckKeyIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CheckKeyIcon.BackgroundTransparency = 1.000
+CheckKeyIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CheckKeyIcon.BorderSizePixel = 0
+CheckKeyIcon.Position = UDim2.new(0, 10, 0.5, 0)
+CheckKeyIcon.Size = UDim2.new(0, 20, 0, 20)
+CheckKeyIcon.Image = "rbxassetid://121895088886807"
+
+local GetKeyHolder = Instance.new("Frame")
+GetKeyHolder.Name = "GetKeyHolder"
+GetKeyHolder.Parent = Main
+GetKeyHolder.AnchorPoint = Vector2.new(0.5, 0.5)
+GetKeyHolder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+GetKeyHolder.BackgroundTransparency = 0.100
+GetKeyHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GetKeyHolder.BorderSizePixel = 0
+GetKeyHolder.Position = UDim2.new(0.5, 0, 0.6, 0)
+GetKeyHolder.Size = UDim2.new(0.9, 0, 0, 40)
+
+local GetKeyHolderCorner = Instance.new("UICorner")
+GetKeyHolderCorner.CornerRadius = UDim.new(0, 8)
+GetKeyHolderCorner.Parent = GetKeyHolder
+
+local GetKey = Instance.new("TextButton")
+GetKey.Name = "GetKey"
+GetKey.Parent = GetKeyHolder
+GetKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GetKey.BackgroundTransparency = 1.000
+GetKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GetKey.BorderSizePixel = 0
+GetKey.Size = UDim2.new(1, 0, 1, 0)
+GetKey.Font = Enum.Font.Jura
+GetKey.RichText = true
+GetKey.Text = "Get Key"
+GetKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+GetKey.TextSize = 14.000
+
+local GetKeyIcon = Instance.new("ImageLabel")
+GetKeyIcon.Name = "GetKeyIcon"
+GetKeyIcon.Parent = GetKey
+GetKeyIcon.AnchorPoint = Vector2.new(0, 0.5)
+GetKeyIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GetKeyIcon.BackgroundTransparency = 1.000
+GetKeyIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GetKeyIcon.BorderSizePixel = 0
+GetKeyIcon.Position = UDim2.new(0, 10, 0.5, 0)
+GetKeyIcon.Size = UDim2.new(0, 20, 0, 20)
+GetKeyIcon.Image = "rbxassetid://131279783581726"
+
+local DiscordHolder = Instance.new("Frame")
+DiscordHolder.Name = "DiscordHolder"
+DiscordHolder.Parent = Main
+DiscordHolder.AnchorPoint = Vector2.new(0.5, 0.5)
+DiscordHolder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+DiscordHolder.BackgroundTransparency = 0.100
+DiscordHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DiscordHolder.BorderSizePixel = 0
+DiscordHolder.Position = UDim2.new(0.25, 0, 0.8, 0)
+DiscordHolder.Size = UDim2.new(0.4, 0, 0, 40)
+
+local DiscordHolderCorner = Instance.new("UICorner")
+DiscordHolderCorner.CornerRadius = UDim.new(0, 8)
+DiscordHolderCorner.Parent = DiscordHolder
+
+local DiscordIcon = Instance.new("ImageLabel")
+DiscordIcon.Name = "DiscordIcon"
+DiscordIcon.Parent = DiscordHolder
+DiscordIcon.AnchorPoint = Vector2.new(0, 0.5)
+DiscordIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DiscordIcon.BackgroundTransparency = 1.000
+DiscordIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DiscordIcon.BorderSizePixel = 0
+DiscordIcon.Position = UDim2.new(0, 10, 0.5, 0)
+DiscordIcon.Size = UDim2.new(0, 20, 0, 20)
+DiscordIcon.Image = "rbxassetid://95513024377593"
+
+local CopyDiscord = Instance.new("TextButton")
+CopyDiscord.Name = "CopyDiscord"
+CopyDiscord.Parent = DiscordHolder
+CopyDiscord.Active = true
+CopyDiscord.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CopyDiscord.BackgroundTransparency = 1.000
+CopyDiscord.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CopyDiscord.BorderSizePixel = 0
+CopyDiscord.Size = UDim2.new(1, 0, 1, 0)
+CopyDiscord.Font = Enum.Font.SourceSans
+CopyDiscord.Text = "Discord"
+CopyDiscord.TextSize = 14.000
+
+local YoutubeHolder = Instance.new("Frame")
+YoutubeHolder.Name = "YoutubeHolder"
+YoutubeHolder.Parent = Main
+YoutubeHolder.AnchorPoint = Vector2.new(0.5, 0.5)
+YoutubeHolder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+YoutubeHolder.BackgroundTransparency = 0.100
+YoutubeHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+YoutubeHolder.BorderSizePixel = 0
+YoutubeHolder.Position = UDim2.new(0.75, 0, 0.8, 0)
+YoutubeHolder.Size = UDim2.new(0.4, 0, 0, 40)
+
+local YoutubeHolderCorner = Instance.new("UICorner")
+YoutubeHolderCorner.CornerRadius = UDim.new(0, 8)
+YoutubeHolderCorner.Parent = YoutubeHolder
+
+local CopyYoutube = Instance.new("TextButton")
+CopyYoutube.Name = "CopyYoutube"
+CopyYoutube.Parent = YoutubeHolder
+CopyYoutube.Active = true
+CopyYoutube.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CopyYoutube.BackgroundTransparency = 1.000
+CopyYoutube.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CopyYoutube.BorderSizePixel = 0
+CopyYoutube.Size = UDim2.new(1, 0, 1, 0)
+CopyYoutube.Font = Enum.Font.SourceSans
+CopyYoutube.Text = "YouTube"
+CopyYoutube.TextSize = 14.000
+
+local YoutubeIcon = Instance.new("ImageLabel")
+YoutubeIcon.Name = "YoutubeIcon"
+YoutubeIcon.Parent = YoutubeHolder
+YoutubeIcon.AnchorPoint = Vector2.new(0, 0.5)
+YoutubeIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+YoutubeIcon.BackgroundTransparency = 1.000
+YoutubeIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+YoutubeIcon.BorderSizePixel = 0
+YoutubeIcon.Position = UDim2.new(0, 10, 0.5, 0)
+YoutubeIcon.Size = UDim2.new(0, 20, 0, 20)
+YoutubeIcon.Image = "rbxassetid://127317008742524"
+
+local WebsiteHolder = Instance.new("Frame")
+WebsiteHolder.Name = "WebsiteHolder"
+WebsiteHolder.Parent = Main
+WebsiteHolder.AnchorPoint = Vector2.new(0.5, 0.5)
+WebsiteHolder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+WebsiteHolder.BackgroundTransparency = 0.100
+WebsiteHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WebsiteHolder.BorderSizePixel = 0
+WebsiteHolder.Position = UDim2.new(0.25, 0, 0.95, 0)
+WebsiteHolder.Size = UDim2.new(0.4, 0, 0, 40)
+
+local WebsiteHolderCorner = Instance.new("UICorner")
+WebsiteHolderCorner.CornerRadius = UDim.new(0, 8)
+WebsiteHolderCorner.Parent = WebsiteHolder
+
+local WebsiteIcon = Instance.new("ImageLabel")
+WebsiteIcon.Name = "WebsiteIcon"
+WebsiteIcon.Parent = WebsiteHolder
+WebsiteIcon.AnchorPoint = Vector2.new(0, 0.5)
+WebsiteIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WebsiteIcon.BackgroundTransparency = 1.000
+WebsiteIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WebsiteIcon.BorderSizePixel = 0
+WebsiteIcon.Position = UDim2.new(0, 10, 0.5, 0)
+WebsiteIcon.Size = UDim2.new(0, 20, 0, 20)
+WebsiteIcon.Image = "rbxassetid://123375485654520"
+
+local CopyWebsite = Instance.new("TextButton")
+CopyWebsite.Name = "CopyWebsite"
+CopyWebsite.Parent = WebsiteHolder
+CopyWebsite.Active = true
+CopyWebsite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CopyWebsite.BackgroundTransparency = 1.000
+CopyWebsite.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CopyWebsite.BorderSizePixel = 0
+CopyWebsite.Size = UDim2.new(1, 0, 1, 0)
+CopyWebsite.Font = Enum.Font.SourceSans
+CopyWebsite.Text = "Website"
+CopyWebsite.TextSize = 14.000
+
+local BuyPremiumHolder = Instance.new("Frame")
+BuyPremiumHolder.Name = "BuyPremiumHolder"
+BuyPremiumHolder.Parent = Main
+BuyPremiumHolder.AnchorPoint = Vector2.new(0.5, 0.5)
+BuyPremiumHolder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+BuyPremiumHolder.BackgroundTransparency = 0.100
+BuyPremiumHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BuyPremiumHolder.BorderSizePixel = 0
+BuyPremiumHolder.Position = UDim2.new(0.75, 0, 0.95, 0)
+BuyPremiumHolder.Size = UDim2.new(0.4, 0, 0, 40)
+
+local BuyPremiumHolderCorner = Instance.new("UICorner")
+BuyPremiumHolderCorner.CornerRadius = UDim.new(0, 8)
+BuyPremiumHolderCorner.Parent = BuyPremiumHolder
+
+local BuyPremium = Instance.new("TextButton")
+BuyPremium.Name = "BuyPremium"
+BuyPremium.Parent = BuyPremiumHolder
+BuyPremium.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BuyPremium.BackgroundTransparency = 1.000
+BuyPremium.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BuyPremium.BorderSizePixel = 0
+BuyPremium.Size = UDim2.new(1, 0, 1, 0)
+BuyPremium.Font = Enum.Font.Jura
+BuyPremium.RichText = true
+BuyPremium.Text = "Premium"
+BuyPremium.TextColor3 = Color3.fromRGB(255, 255, 255)
+BuyPremium.TextSize = 14.000
+
+local BuyPremiumIcon = Instance.new("ImageLabel")
+BuyPremiumIcon.Name = "BuyPremiumIcon"
+BuyPremiumIcon.Parent = BuyPremium
+BuyPremiumIcon.AnchorPoint = Vector2.new(0, 0.5)
+BuyPremiumIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BuyPremiumIcon.BackgroundTransparency = 1.000
+BuyPremiumIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BuyPremiumIcon.BorderSizePixel = 0
+BuyPremiumIcon.Position = UDim2.new(0, 10, 0.5, 0)
+BuyPremiumIcon.Size = UDim2.new(0, 20, 0, 20)
+BuyPremiumIcon.Image = "rbxassetid://103059916184734"
+
+local UITogglerHolder = Instance.new("Frame")
+UITogglerHolder.Name = "UITogglerHolder"
+UITogglerHolder.Parent = Main
+UITogglerHolder.AnchorPoint = Vector2.new(1, 0)
+UITogglerHolder.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+UITogglerHolder.BackgroundTransparency = 0.100
+UITogglerHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UITogglerHolder.BorderSizePixel = 0
+UITogglerHolder.Position = UDim2.new(1, -10, 0, 10)
+UITogglerHolder.Size = UDim2.new(0, 30, 0, 30)
+UITogglerHolder.ClipsDescendants = true
+
+local UITogglerHolderCorner = Instance.new("UICorner")
+UITogglerHolderCorner.Parent = UITogglerHolder
+
+local UIToggler = Instance.new("ImageButton")
+UIToggler.Name = "UIToggler"
+UIToggler.Parent = UITogglerHolder
+UIToggler.Active = true
+UIToggler.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UIToggler.BackgroundTransparency = 1.000
+UIToggler.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UIToggler.BorderSizePixel = 0
+UIToggler.Size = UDim2.new(1, 0, 1, 0)
+UIToggler.ZIndex = 2
+UIToggler.ClipsDescendants = true
+UIToggler.Image = "rbxassetid://131129943627373"
+UIToggler.ImageTransparency = 0.100
+
+local UITogglerCorner = Instance.new("UICorner")
+UITogglerCorner.Parent = UIToggler
+
+local UITogglerLogo = Instance.new("ImageLabel")
+UITogglerLogo.Name = "UITogglerLogo"
+UITogglerLogo.Parent = UIToggler
+UITogglerLogo.AnchorPoint = Vector2.new(0.5, 0.5)
+UITogglerLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UITogglerLogo.BackgroundTransparency = 1.000
+UITogglerLogo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UITogglerLogo.BorderSizePixel = 0
+UITogglerLogo.Position = UDim2.new(0.5, 0, 0.5, 0)
+UITogglerLogo.Size = UDim2.new(0, 15, 0, 15)
+UITogglerLogo.ZIndex = 3
+UITogglerLogo.Image = "rbxassetid://136966526591317"
+
+local function ToggleUI()
+    local targetPosition = Main.Position.Y.Scale == 0.5 and UDim2.new(0.5, 0, -0.5, 0) or UDim2.new(0.5, 0, 0.5, 0)
+    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+    local tween = TweenService:Create(Main, tweenInfo, {Position = targetPosition})
+    tween:Play()
+end
+
+UIToggler.MouseButton1Click:Connect(ToggleUI)
+
+local function CheckPremium()
+    if _G.Key == _G.PremiumKey then
+        wait(1)
+        createNotification("Desynced Premium found. enjoy the extra features!")
+        local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+        local tween = TweenService:Create(Main, tweenInfo, {Position = UDim2.new(0.5, 0, -0.5, 0)})
+        tween:Play()
+    end
+end
+
+local function ValidateAndLoad()
+    local enteredKey = EnterKey.Text
+    if ValidateKey(enteredKey) then
+        local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+        local tween = TweenService:Create(Main, tweenInfo, {Position = UDim2.new(0.5, 0, -0.5, 0)})
+        tween:Play()
+        
+        local gameSupported = false
+        for gameName, _ in pairs(supportedGames) do
+            if tostring(PlaceId):find(gameName) then
+                gameSupported = true
+                break
+            end
+        end
+        
+        if gameSupported then
+            _G.Key = tostring(math.random(1000000, 9999999)) .. "aZ3xN8LpQv7TgR1bDw9K"
+            loadstring(game:HttpGet("https://ervcommunity.com/" .. tostring(PlaceId) .. ".lua"))()
+        else
+            createNotification("This game is currently not supported by Desynced.")
+        end
+    end
+end
+
+CheckKey.MouseButton1Click:Connect(ValidateAndLoad)
+
+EnterKey.FocusLost:Connect(function(enterPressed)
+    if enterPressed then
+        ValidateAndLoad()
+    end
+end)
+
+local function SaveKeyToFile()
+    writefile("desynced_key.txt", EnterKey.Text)
+end
+
+local function CopyWebsiteLink()
+    local tweenInfo = TweenInfo.new(0.2)
+    local tween = TweenService:Create(WebsiteIcon, tweenInfo, {ImageColor3 = Color3.fromRGB(0, 255, 0)})
+    tween:Play()
+    tween.Completed:Connect(function()
+        setclipboard("https://ervcommunity.com")
+        createNotification("Website link successfully copied to your clipboard.")
+        local resetTween = TweenService:Create(WebsiteIcon, tweenInfo, {ImageColor3 = Color3.fromRGB(255, 255, 255)})
+        resetTween:Play()
+    end)
+end
+
+CopyWebsite.MouseButton1Click:Connect(CopyWebsiteLink)
+
+local function CopyPremiumLink()
+    local tweenInfo = TweenInfo.new(0.2)
+    local tween = TweenService:Create(BuyPremiumIcon, tweenInfo, {ImageColor3 = Color3.fromRGB(0, 255, 0)})
+    tween:Play()
+    tween.Completed:Connect(function()
+        setclipboard("https://desynced404.sellauth.com/")
+        createNotification("Desynced Shop link successfully copied to your clipboard.")
+        local resetTween = TweenService:Create(BuyPremiumIcon, tweenInfo, {ImageColor3 = Color3.fromRGB(255, 255, 255)})
+        resetTween:Play()
+    end)
+end
+
+BuyPremium.MouseButton1Click:Connect(CopyPremiumLink)
+
+local function GetKeyFromWebsite()
+    if isfile("desynced_key.txt") then
+        EnterKey.Text = readfile("desynced_key.txt")
+    else
+        local tweenInfo = TweenInfo.new(0.2)
+        local tween = TweenService:Create(GetKeyIcon, tweenInfo, {ImageColor3 = Color3.fromRGB(0, 255, 0)})
+        tween:Play()
+        tween.Completed:Connect(function()
+            setclipboard("https://pandadevelopment.net/getkey?service=desynced&hwid=" .. GetKey())
+            createNotification("Key system link copied to clipboard. Proceed to authenticate.")
+            local resetTween = TweenService:Create(GetKeyIcon, tweenInfo, {ImageColor3 = Color3.fromRGB(255, 255, 255)})
+            resetTween:Play()
+        end)
+    end
+end
+
+GetKey.MouseButton1Click:Connect(GetKeyFromWebsite)
+
+local function ValidateKeyOnline()
+    local key = EnterKey.Text
+    if key and key ~= "" then
+        local tweenInfo = TweenInfo.new(0.2)
+        local tween = TweenService:Create(CheckKeyIcon, tweenInfo, {ImageColor3 = Color3.fromRGB(0, 255, 0)})
+        tween:Play()
+        
+        wait(1)
+        
+        local success, response = pcall(function()
+            return HttpService:JSONDecode(game:HttpGet("https://pandadevelopment.net/v2_validation?key=" .. key .. "&service=desynced&hwid=" .. GetKey()))
+        end)
+        
+        if success and response then
+            if response.V2_Authentication and response.V2_Authentication.success then
+                local keyInfo = response.Key_Information
+                if keyInfo and keyInfo.Premium_Mode then
+                    _G.PremiumKey = key
+                end
+                _G.Key = key
+                createNotification("You're in! Key authentication was successful.")
+                
+                local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+                local tween = TweenService:Create(Main, tweenInfo, {Position = UDim2.new(0.5, 0, -0.5, 0)})
+                tween:Play()
+                
+                local gameSupported = false
+                for gameName, _ in pairs(supportedGames) do
+                    if tostring(PlaceId):find(gameName) then
+                        gameSupported = true
+                        break
+                    end
+                end
+                
+                if gameSupported then
+                    loadstring(game:HttpGet("https://ervcommunity.com/" .. tostring(PlaceId) .. ".lua"))()
+                else
+                    createNotification("This game is currently not supported by Desynced.")
+                end
+            else
+                createNotification("Authentication failed. Please verify your key and try again.")
+            end
+        else
+            createNotification("Authentication failed. Please verify your key and try again.")
+        end
+    end
+end
+
+CheckKey.MouseButton1Click:Connect(ValidateKeyOnline)
+
+local function CopyYoutubeLink()
+    local tweenInfo = TweenInfo.new(0.2)
+    local tween = TweenService:Create(YoutubeIcon, tweenInfo, {ImageColor3 = Color3.fromRGB(0, 255, 0)})
+    tween:Play()
+    tween.Completed:Connect(function()
+        setclipboard("https://www.youtube.com/@terrible_performance")
+        createNotification("YouTube channel link successfully copied to your clipboard.")
+        local resetTween = TweenService:Create(YoutubeIcon, tweenInfo, {ImageColor3 = Color3.fromRGB(255, 255, 255)})
+        resetTween:Play()
+    end)
+end
+
+CopyYoutube.MouseButton1Click:Connect(CopyYoutubeLink)
+
+local function CopyDiscordLink()
+    local tweenInfo = TweenInfo.new(0.2)
+    local tween = TweenService:Create(DiscordIcon, tweenInfo, {ImageColor3 = Color3.fromRGB(0, 255, 0)})
+    tween:Play()
+    tween.Completed:Connect(function()
+        setclipboard("https://discord.gg/zERTrm3Xj3")
+        createNotification("Discord invite link has been copied to your clipboard.")
+        local resetTween = TweenService:Create(DiscordIcon, tweenInfo, {ImageColor3 = Color3.fromRGB(255, 255, 255)})
+        resetTween:Play()
+    end)
+end
+
+CopyDiscord.MouseButton1Click:Connect(CopyDiscordLink)
+
+CheckPremium()
