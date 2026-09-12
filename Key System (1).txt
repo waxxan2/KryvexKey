@@ -173,7 +173,7 @@ local function CreatePulseBtn(name, scriptURL)
     end)
 end
 
-CreateKryvexBtn("Muscle Legends", "https://github.com/waxxan2/PulsePublic/raw/refs/heads/main/Pulse%20Hub%20(1).txt")
+CreateKryvexBtn("Muscle Legends", "https://github.com/waxxan2/KryvexPublic/raw/refs/heads/main/Kryvex%20Public")
 
 -- Key Verification Event
 _0xSB.MouseButton1Click:Connect(function()
