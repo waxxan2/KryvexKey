@@ -1,6 +1,6 @@
 -- [[ IF YOU DON'T INCLUDE MY NAME IN THE CREDITS, I'LL LEAK YOUR SCRIPT ♥️ ]]
 
-local _0xK = "Syniox-X-Yusuf" 
+local _0xK = "KryvexWozzy" 
 local TweenService = game:GetService("TweenService")
 
 local _0xCG = game:GetService("CoreGui")
@@ -20,7 +20,7 @@ _0xST.Color = Color3.fromRGB(160, 0, 0)
 _0xST.Thickness = 2.5
 
 local _0xTL = Instance.new("TextLabel", _0xMF)
-_0xTL.Text = "YOUR SCRİPT NAME 🔥"
+_0xTL.Text = "KRYVEX KEY SYSTEM 🔥"
 _0xTL.Size = UDim2.new(1, 0, 0, 50)
 _0xTL.TextColor3 = Color3.fromRGB(160, 0, 0)
 _0xTL.BackgroundTransparency = 1
@@ -126,10 +126,8 @@ local function CreateSynioxBtn(name, scriptURL)
     end)
 end
 
-CreateSynioxBtn("UR SCRİPT NAME", "UR SCRİPT LİNK")
-CreateSynioxBtn("UR SCRİPT NAME", "LINK")
-CreateSynioxBtn("Coming Soon", "LINK")
-CreateSynioxBtn("Coming Soon", "LINK")
+CreateKryvexBtn("Muscle Legends", "UR SCRİPT LİNK")
+
 
 _0xSB.MouseButton1Click:Connect(function()
     if _0xKI.Text == _0xK then
