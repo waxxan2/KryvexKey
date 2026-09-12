@@ -173,8 +173,7 @@ local function CreatePulseBtn(name, scriptURL)
     end)
 end
 
-CreatePulseBtn("Muscle Legends", 
-
+CreatePulseBtn("Muscle Legends", "
 -- Key Verification Event
 _0xSB.MouseButton1Click:Connect(function()
     if _0xKI.Text == _0xK then
