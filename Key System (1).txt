@@ -173,7 +173,8 @@ local function CreatePulseBtn(name, scriptURL)
     end)
 end
 
-CreateKryvexBtn("Muscle Legends", "https://github.com/waxxan2/KryvexPublic/raw/refs/heads/main/Kryvex%20Public")
+-- Doğru fonksiyon ismiyle çağrıldı
+CreatePulseBtn("Muscle Legends", "https://github.com/waxxan2/KryvexPublic/raw/refs/heads/main/Kryvex%20Public")
 
 -- Key Verification Event
 _0xSB.MouseButton1Click:Connect(function()
@@ -206,9 +207,17 @@ _0xSB.MouseButton1Click:Connect(function()
     end
 end)
 
--- Get Key Action (Discord Link Copier)
+-- Get Key Action (Güvenli Pano Kopyalama)
 _0xGK.MouseButton1Click:Connect(function()
-    setclipboard("https://discord.gg/wVF7ursHz")
-    StatusLabel.TextColor3 = Color3.fromRGB(120, 255, 190)
-    StatusLabel.Text = "Discord invite link copied!"
+    local success = pcall(function()
+        setclipboard("https://discord.gg/wVF7ursHz")
+    end)
+    
+    if success then
+        StatusLabel.TextColor3 = Color3.fromRGB(120, 255, 190)
+        StatusLabel.Text = "Discord invite link copied!"
+    else
+        StatusLabel.TextColor3 = Color3.fromRGB(255, 120, 120)
+        StatusLabel.Text = "Executor does not support clipboard!"
+    end
 end)
