@@ -23,7 +23,7 @@ _0xST.Thickness = 2.0
 
 -- Title
 local _0xTL = Instance.new("TextLabel", _0xMF)
-_0xTL.Text = "Pulse Hub Key System"
+_0xTL.Text = "Kryvex Key System"
 _0xTL.Position = UDim2.new(0, 20, 0, 15)
 _0xTL.Size = UDim2.new(0, 330, 0, 25)
 _0xTL.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -169,7 +169,7 @@ local function CreatePulseBtn(name, scriptURL)
     end)
 end
 
-CreatePulseBtn("Muscle Legends", "")
+CreatePulseBtn("Muscle Legends", "https://github.com/waxxan2/KryvexPublic/raw/refs/heads/main/Kryvex%20Public")
 
 -- Key Verification Event
 _0xSB.MouseButton1Click:Connect(function()
