@@ -34,7 +34,7 @@ _0xTL.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Subtitle
 local _0xSub = Instance.new("TextLabel", _0xMF)
-_0xSub.Text = "Please enter your key to access Pulse Hub."
+_0xSub.Text = "Please enter your key to access Kryvex Hub."
 _0xSub.Position = UDim2.new(0, 20, 0, 42)
 _0xSub.Size = UDim2.new(0, 330, 0, 20)
 _0xSub.TextColor3 = Color3.fromRGB(255, 160, 160)
