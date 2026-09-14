@@ -123,7 +123,7 @@ LoaderStroke.Color = Color3.fromRGB(255, 0, 0)
 LoaderStroke.Thickness = 2.5
 
 local LoaderTitle = Instance.new("TextLabel", LoaderFrame)
-LoaderTitle.Text = "PULSE LOADER || V2"
+LoaderTitle.Text = "KRYVEX LOADER || V2"
 LoaderTitle.Size = UDim2.new(1, 0, 0, 55)
 LoaderTitle.TextColor3 = Color3.fromRGB(255, 50, 50)
 LoaderTitle.BackgroundTransparency = 1
