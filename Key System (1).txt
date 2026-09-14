@@ -68,7 +68,7 @@ _0xKI.ClearTextOnFocus = false
 
 -- Submit Button (Bright Red Theme)
 local _0xSB = Instance.new("TextButton", _0xMF)
-_0xSB.Text = "Verify Key"
+_0xSB.Text = "🚀 Verify Key 🚀"
 _0xSB.Position = UDim2.new(0, 20, 0, 132)
 _0xSB.Size = UDim2.new(0, 158, 0, 38)
 _0xSB.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -83,7 +83,7 @@ SubmitStroke.Thickness = 1
 
 -- Get Key Button (Red Accent / Dark)
 local _0xGK = Instance.new("TextButton", _0xMF)
-_0xGK.Text = "Get Key"
+_0xGK.Text = "🔑 Get Key 🔑 "
 _0xGK.Position = UDim2.new(0, 192, 0, 132)
 _0xGK.Size = UDim2.new(0, 158, 0, 38)
 _0xGK.BackgroundColor3 = Color3.fromRGB(55, 15, 15)
